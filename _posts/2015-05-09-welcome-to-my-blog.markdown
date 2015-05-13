@@ -4,7 +4,7 @@ title:  "阿里校招实习生面经"
 date:   2015-05-09 16:47:22
 categories: jekyll update
 ---
-【一点前言】第一次写博客好紧张\(≧▽≦)/~~ 先自我介绍一下，我是北京人，本科香港某大数学系学渣一只……从大三开始有转计算机的想法，一直对编程什么的很有兴趣，大四干脆调整航向去了计算机系辅修。大四下学期才在周围一众大神的带guai领pian下产生了暑假实习的想法，丝毫不顾自己基础薄wei弱ling的事实就去申请了……在此先谢过Vincent、Louis、成神、金总等等各位大神的全程carry。
+【一点前言】第一次写博客好紧张\\(≧▽≦)/~~ 先自我介绍一下，我是北京人，本科香港某大数学系学渣一只……从大三开始有转计算机的想法，一直对编程什么的很有兴趣，大四干脆调整航向去了计算机系辅修。大四下学期才在周围一众大神的带guai领pian下产生了暑假实习的想法，丝毫不顾自己基础薄wei弱ling的事实就去申请了……在此先谢过[Vincent][vincent]、Louis、[成神][wc]、[金总][Elvin]等等各位大神的全程carry。
 
 【申请流程】找内推 -> 内推面试（电话）-> 笔试（内推没过）-> 线下面试 -> 等
 
@@ -12,8 +12,8 @@ categories: jekyll update
 
 【校招笔试】我还是申请的数据研发工程师，线上笔试涉及到保密的问题不方便细说，我只能说考得覆盖面真的很广，概率、计算机结构、数据结构、数据库、Java、C++、SQL、TCP……知识点会考的比较深。
 
-【线上面试】因为在香港读书，最近的面试地点就是广州，所以也是和小伙伴们一起定了酒店，提前一天到达。第二天去到现场的时候
+【下面试】未完待续……
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+[vincent]: https://github.com/grayy921013
+[wc]: https://github.com/wcyz666
+[Elvin]: https://github.com/elvinjin
