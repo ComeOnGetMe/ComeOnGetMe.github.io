@@ -4,7 +4,7 @@ email: yzp451312410@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hey! This is my personal blog page. There are much fun stuff in my posts, 
   like interview reports, notes about what I have learned, or my analyses 
-  to some cute programming problems. This is in a base Jekyll theme and I am
+  to some cute programming problems. This is in a basic Jekyll theme and I am
   using Markdown for the posts.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
