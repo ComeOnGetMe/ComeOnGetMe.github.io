@@ -11,14 +11,7 @@ categories: jekyll update
 
 ####[原题][null-link]
 **Problem B. Typewriter Monkey**  
-This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.
-Small input
-11 points	
-Solve B-small
-Large input
-22 points	
-Solve B-large
-Problem
+This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.  
 
 Your publishing house has decided to use monkeys randomly typing at keyboards to write great works of literature. You are the supervisor for one monkey with a keyboard containing K keys, each of which is labeled with an uppercase English letter. (There may be multiple keys displaying the same letter.) The monkey will start with an empty string and repeat the following S times: choose a key from its keyboard uniformly at random and press it, adding a copy of that key's letter to the right end of the string. The final resulting string will have length S.
 
@@ -89,12 +82,12 @@ In Case #4, the monkey has a 1/3 chance of typing a "G" first and a 1/3 chance o
 In Case #5, the monkey could in theory type "ROSENCRANTZ" up to nine times, but the chances of this happening even once are so small that they are negligible compared to the acceptable margin of error for answers.
 
 ####[题意][null-link]
-说有一只猴子叫灰灰……（此处省略一万字）你给了灰灰一个有 K 个字母的键盘，跟它说了一个长度为 L 的单词（当然它听不懂），然后让它在键盘上敲 S 个键，并答应它每敲出一次这个单词就给他一根香蕉。请求出这 S 个键的输出当中该单词**（最多能出现的次数 - 出现次数的期望）**的值是多少。注意：在 BBB 中，单词BB出现的次数为2（重叠计算）。
+说有一只猴子叫灰灰……（此处省略一万字）你给了灰灰一个有 K 个字母的键盘，跟它说了一个长度为 L 的单词（当然它听不懂），然后让它在键盘上随意敲 S 个键，并答应它每敲出一次这个单词就给他一根香蕉。请求出在灰灰敲出的 S 个键当中该单词**（最多能出现的次数 - 出现次数的期望）**的值是多少。注意：在 BBB 中，单词BB出现的次数算做为2（重叠计算）。
 
 ####[解法][null-link]
 首先，这其实是两个问题，一个是求**期望**，另一个是求**最大值**；他们的差没有什么实际意义，即无法直接求出（也许有方法能够直接求，但未免有点简单问题复杂化）。
 
-先说**期望**。我在答案中看到了有人用 Trie 遍历了所有keyboard输出的情况，据说也不慢（S < 100），但未免太麻烦。其实我们只需要先求出按 L 个键能够按出 target 的概率，再乘以它在 S 个键中能够出现的位置个数就可以了，即 E = P(L) * (S - L + 1) 。这样不用把重叠的情况单拿出来讨论，具体的理论依据在官方的[解析][analysis]中有提到。至于P(L) 的求法，只需要按字母在 target 中的顺序把它在keyboard中的出现频率乘起来就可以了。
+先说**期望**。我在答案中看到了有人用 Trie 遍历了所有keyboard输出的情况，据说也不慢（S < 100），虽然不用想的很清楚就可以过，但确实太麻烦。其实我们只需要先求出按 L 个键能够按出 target 的概率，再乘以它在 S 个键中可能出现的位置个数就可以了，即 E = P(L) * (S - L + 1) 。这样不用把重叠的情况单拿出来讨论，具体的理论依据在官方的[解析][analysis]中有提到。至于 P(L) 的求法，只需要按字母在 target 中的顺序把它在keyboard中的出现频率乘起来就可以了。
 
 再说**最大值**。这里我引入了一个 *Effective Length* 的概念。比如说对于单词 ABA，根据重叠的计数方式其实在第一个单词之后我们只需要在后面再加一个 BA ，整个单词就可以算作出现了两次（ABABA中有两个 ABA）这种情况就定义它的 effective length 为2。具体求的过程中可以直接用暴力的方法，对每个字符判断一下以它开始的子串是否等于它前面的那部分子串，复杂度为 O(L^2)，因为 L 并不大，这个算法还是很快可以得出结果。另：[KMP][KMP]可以在线性时间内算出结果。
 
