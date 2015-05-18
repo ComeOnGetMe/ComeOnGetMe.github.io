@@ -16,6 +16,6 @@ categories: jekyll update
 [GCJ2015 Round1C C][1c3]  
 
 [question]: https://code.google.com/codejam/contest/4244486/dashboard
-[1c1]: chrome://not-a-link
-[1c2]: chrome://not-a-link
-[1c3]: chrome://not-a-link
+[1c1]: http://comeongetme.github.io/jekyll/update/2015/05/15/Google-Code-Jam-2015-1c1.html
+[1c2]: http://comeongetme.github.io/jekyll/update/2015/05/15/Google-Code-Jam-2015-1c2.html
+[1c3]: http://comeongetme.github.io/jekyll/update/2015/05/16/Google-Code-Jam-2015-1c3.html
