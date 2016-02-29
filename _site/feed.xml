@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nala fo glob</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>Glob S&#39;nala</title>
+    <description>Hey! This is my personal blog page. There are much fun stuff in my posts,  like interview reports, notes about what I have learned, or my analyses  to some cute programming problems.
 </description>
     <link>ComeOnGetMe.github.io/</link>
     <atom:link href="ComeOnGetMe.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 May 2015 17:33:48 +0800</pubDate>
-    <lastBuildDate>Wed, 13 May 2015 17:33:48 +0800</lastBuildDate>
+    <pubDate>Mon, 29 Feb 2016 16:31:30 +0800</pubDate>
+    <lastBuildDate>Mon, 29 Feb 2016 16:31:30 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>阿里校招实习生面经</title>
-        <description>&lt;p&gt;【一点前言】第一次写博客好紧张\(≧▽≦)/~~ 先自我介绍一下，我是北京人，本科香港某大数学系学渣一只……从大三开始有转计算机的想法，一直对编程什么的很有兴趣，大四干脆调整航向去了计算机系辅修。大四下学期才在周围一众大神的带guai领pian下产生了暑假实习的想法，丝毫不顾自己基础薄wei弱ling的事实就去申请了……在此先谢过&lt;a href=&quot;https://github.com/grayy921013&quot;&gt;Vincent&lt;/a&gt;、Louis、&lt;a href=&quot;https://github.com/wcyz666&quot;&gt;成神&lt;/a&gt;、&lt;a href=&quot;https://github.com/elvinjin&quot;&gt;金总&lt;/a&gt;等等各位大神的全程carry。&lt;/p&gt;
+        <title>解题报告汇总：Google Code Jam 2015</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://code.google.com/codejam/contest/4244486/dashboard&quot;&gt;题目在这里&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;【申请流程】找内推 -&amp;gt; 内推面试（电话）-&amp;gt; 笔试（内推没过）-&amp;gt; 线下面试 -&amp;gt; 等&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;【回到正题】先说内推。我申请的是数据研发工程师，跟大多数人一样抱了一位内部的大腿；但是一面的时候面试官直接跟我说建议先去读个研，有关项目和技术的问题一个都没问，面试就这么结束了……事后我结合小伙伴们的内推面试分析了一下，感觉还是因为内推的要求比较高，面试官问的都是一些很直接的问题，会更专注于你的工作能力而不是你的潜力；而我首先专业不对口，然后我也没有相关项目经验，又不是很熟悉Java/C++，所以面试官就还是把我扔回校招让他们去慢慢鉴定了……我当时又问了面试官这个情况能不能帮我转到那些偏研究性质的工作去，得到的结论是本科的学历又不太够，所以直接就跟我说还是去读个研。内推就酱……&lt;/p&gt;
+&lt;p&gt;今年第一次玩 Google Code Jam，没事写了几个解题报告……代码基本是当时自己写的，很多细节都不到位，有些甚至自己看来都比较幼稚。不过也有些是我觉得官方的 analysis 写的不清楚的或者我自己的一些补充。大家随便看看……&lt;/p&gt;
 
-&lt;p&gt;【校招笔试】我还是申请的数据研发工程师，线上笔试涉及到保密的问题不方便细说，我只能说考得覆盖面真的很广，概率、计算机结构、数据结构、数据库、Java、C++、SQL、TCP……知识点会考的比较深。&lt;/p&gt;
-
-&lt;p&gt;【下面试】未完待续……&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://comeongetme.github.io/jekyll/update/2015/05/13/Google-Code-Jam-2015-1c1.html&quot;&gt;GCJ2015 Round1C A&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://comeongetme.github.io/jekyll/update/2015/05/15/Google-Code-Jam-2015-1c2.html&quot;&gt;GCJ2015 Round1C B&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://comeongetme.github.io/jekyll/update/2015/05/16/Google-Code-Jam-2015-1c3.html&quot;&gt;GCJ2015 Round1C C&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 10 May 2015 00:47:22 +0800</pubDate>
-        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/10/welcome-to-my-blog.html</link>
-        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/10/welcome-to-my-blog.html</guid>
+        <pubDate>Mon, 18 May 2015 00:00:00 +0800</pubDate>
+        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/18/Google-Code-Jam-2015.html</link>
+        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/18/Google-Code-Jam-2015.html</guid>
         
         
         <category>jekyll</category>
@@ -35,7 +35,421 @@
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>解题报告：Google Code Jam 2015 Round1C Q3</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://code.google.com/codejam/contest/4244486/dashboard&quot;&gt;原题地址在这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;null-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;原题&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Problem C. Less Money, More Problems&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Up until today, the nation you live in has used D different positive integer denominations of coin for all transactions. Today, the queen got angry when a subject tried to pay his taxes with a giant sack of low-valued coins, and she just decreed that no more than C coins of any one denomination may be used in any one purchase. For instance, if C = 2 and the existing denominations are 1 and 5, it is possible to buy something of value 11 by using two 5s and one 1, or something of value 12 by using two 5s and two 1s, but it is impossible to buy something of value 9 or 17.&lt;/p&gt;
+
+&lt;p&gt;You cannot directly challenge the queen’s decree, but you happen to be in charge of the mint, and you can issue new denominations of coin. You want to make it possible for any item of positive value at most V to be purchased under the queen’s new rules. (Note that this may not necessarily have been possible before the queen’s decree.) Moreover, you want to introduce as few new denominations as possible, and your final combined set of pre-existing and new denominations may not have any repeats.&lt;/p&gt;
+
+&lt;p&gt;What is the smallest number of new denominations required?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The first line of the input gives the number of test cases, T. T test cases follow. Each consists of one line with three space-separated values C, D, and V, followed by another line with D distinct space-separated values representing the preexisting denominations, in ascending order.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For each test case, output one line containing “Case #x: y”, where x is the test case number (starting from 1) and y is the minimum number of new denominations required, as described above.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Limits&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1 ≤ T ≤ 100.&lt;br /&gt;
+Each existing denomination ≤ V.&lt;/p&gt;
+
+&lt;p&gt;Small dataset&lt;/p&gt;
+
+&lt;p&gt;C = 1.&lt;br /&gt;
+1 ≤ D ≤ 5.&lt;br /&gt;
+1 ≤ V ≤ 30.&lt;/p&gt;
+
+&lt;p&gt;Large dataset&lt;/p&gt;
+
+&lt;p&gt;1 ≤ C ≤ 100.&lt;br /&gt;
+1 ≤ D ≤ 100.&lt;br /&gt;
+1 ≤ V ≤ 109.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input&lt;/p&gt;
+
+&lt;p&gt;4&lt;br /&gt;
+1 2 3&lt;br /&gt;
+1 2&lt;br /&gt;
+1 3 6&lt;br /&gt;
+1 2 5&lt;br /&gt;
+2 1 3&lt;br /&gt;
+3&lt;br /&gt;
+1 6 100&lt;br /&gt;
+1 5 10 25 50 100&lt;/p&gt;
+
+&lt;p&gt;Output&lt;/p&gt;
+
+&lt;p&gt;Case #1: 0&lt;br /&gt;
+Case #2: 1&lt;br /&gt;
+Case #3: 1&lt;br /&gt;
+Case #4: 3&lt;/p&gt;
+
+&lt;p&gt;Note that Cases #3 and #4 are not within the limits for the Small dataset.&lt;/p&gt;
+
+&lt;p&gt;In Case #1, it is already possible to make all the required values (1, 2, and 3) using at most one copy of each of the existing denominations.&lt;/p&gt;
+
+&lt;p&gt;In Case #2, it suffices to add a denomination of either 3 or 4 – whichever you choose, only one new denomination is required.&lt;/p&gt;
+
+&lt;p&gt;In Case #3, the optimal solution is to add a denomination of 1.&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-1&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;题意&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;女王交给你一个任务：让你为这个国家设计一套新版硬币，对于面额的要求是：&lt;br /&gt;
+	1. 现有的 D 种面额需要保留；&lt;br /&gt;
+	2. 新版硬币在每种面额的硬币最多使用 C 个的情况下，能够达到的最大价值至少是 V 。&lt;/p&gt;
+
+&lt;p&gt;举例：C, D, V = 1，3，6；三种面额分别为1，2，5。首先从1和2我们能够得到3，但由于每种硬币只能用一次，而第三种面额就是5，所以这种情况下我们没法凑出4，因而我们需要加入面额为4的新硬币。加入之后，我们能够凑出的价值为 5 + 4 = 9，已经超过了所要求的6，输出1，完工。&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-2&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;解法&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;难度仍然只在于想清楚过程。运用归纳法的思想，从最小的面额开始把硬币按大小顺序一个个放到钱包里，假设用钱包中现有的硬币我可以凑出任何小于等于 N 的数，那我们只需要看下一个硬币的面额是否大于或等于 （N + 1）：如果小于，那么我们只需要将下一个硬币添加到我们的钱包当中并更新 N 即可；如果大于，我们必须额外添加面值为（N + 1）的硬币，原因如下：
+第一，用后面的硬币是不可能凑出（N + 1）的，因为它们全部大于（N + 1）；第二，用已有的硬币凑不出（N + 1）来，我们必须添加新的；第三，如果新硬币的面值小于（N + 1），那么添加后钱包所能凑出的数额将会小于添加面值为（N + 1）的硬币之后它所能凑出的数额。所以结论是，此时&lt;strong&gt;最优解&lt;/strong&gt;就是添加面值为（N + 1）的硬币。&lt;/p&gt;
+
+&lt;p&gt;想清楚以后，写其实不难。当时做的时候我还在想用一些比如 &lt;code&gt;deque&lt;/code&gt; 或者 &lt;code&gt;set&lt;/code&gt; 之类的结构去实现，但其实只需要维护一个所能表示的最大值（integer）即可。更新的时候只需要另 can_reach &amp;lt;- can_reach + (new_coin) * C 。我一开始没想通，最后差一点时间写完……有点遗憾。复杂度在这里其实无关紧要了，简单分析一下结构，粗略来看，每个 loop 当中 reach 都会变大 C 倍，所以最次就是 O(logV) 的时间复杂度。代码如下：&lt;/p&gt;
+
+&lt;h4 id=&quot;pythonnull-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;Python&lt;/a&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tc&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;xrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;coin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;coins&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+	&lt;span class=&quot;c&quot;&gt;# This WHILE loop can be combined with the previous one&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reach&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Case #{}: {}&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 16 May 2015 00:00:00 +0800</pubDate>
+        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/16/Google-Code-Jam-2015-1c3.html</link>
+        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/16/Google-Code-Jam-2015-1c3.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>解题报告：Google Code Jam 2015 Round1C Q2</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://code.google.com/codejam/contest/4244486/dashboard&quot;&gt;原题地址在这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;null-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;原题&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Problem B. Typewriter Monkey&lt;/strong&gt;&lt;br /&gt;
+This contest is open for practice. You can try every problem as many times as you like, though we won’t keep track of which problems you solve. Read the Quick-Start Guide to get started.&lt;/p&gt;
+
+&lt;p&gt;Your publishing house has decided to use monkeys randomly typing at keyboards to write great works of literature. You are the supervisor for one monkey with a keyboard containing K keys, each of which is labeled with an uppercase English letter. (There may be multiple keys displaying the same letter.) The monkey will start with an empty string and repeat the following S times: choose a key from its keyboard uniformly at random and press it, adding a copy of that key’s letter to the right end of the string. The final resulting string will have length S.&lt;/p&gt;
+
+&lt;p&gt;You have a target word of length L that you are hoping the monkey will type. (The target word will not necessarily be a real English word.) This target word may even appear multiple times in what the monkey types. (Overlapping instances count too – for example, if “ABA” is the target word and the monkey types “ABABA”, that contains two instances of the target.)&lt;/p&gt;
+
+&lt;p&gt;You plan to pay the monkey one banana for each instance of the target word that it types. When you go to inspect the monkey’s work, you will bring along the minimum number of bananas that you need to ensure that you will always have enough bananas to pay the monkey, no matter what it has typed. Then, you will pay the monkey one banana for each instance of the target word that it actually typed. You will keep the remaining bananas that you brought with you.&lt;/p&gt;
+
+&lt;p&gt;What is the expected number of bananas that you will get to keep?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The first line of the input gives the number of test cases, T. T test cases follow. Each consists of three lines. The first contains three space-separated positive integers: K, L, and S. The second contains a string of K uppercase English letters representing the monkey’s keyboard. The third contains a string of L uppercase English letters representing the target word.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For each test case, output one line containing “Case #x: y”, where y is the expected number of bananas you will get to keep after paying the monkey.&lt;/p&gt;
+
+&lt;p&gt;y will be considered correct if it is within an absolute or relative error of 10-6 of the correct answer. See the FAQ for an explanation of what that means, and what formats of real numbers we accept.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Limits&lt;/strong&gt;&lt;br /&gt;
+1 ≤ T ≤ 100.&lt;/p&gt;
+
+&lt;p&gt;Small dataset&lt;br /&gt;
+1 ≤ K ≤ 7.&lt;br /&gt;
+1 ≤ L ≤ S ≤ 7.&lt;/p&gt;
+
+&lt;p&gt;Large dataset&lt;br /&gt;
+1 ≤ K ≤ 100.&lt;br /&gt;
+1 ≤ L ≤ S ≤ 100.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input&lt;br /&gt;
+5&lt;br /&gt;
+7 6 6&lt;br /&gt;
+BANANAS&lt;br /&gt;
+MONKEY&lt;br /&gt;
+2 3 4&lt;br /&gt;
+AA&lt;br /&gt;
+AAA&lt;br /&gt;
+2 1 2&lt;br /&gt;
+AB&lt;br /&gt;
+B&lt;br /&gt;
+6 2 2&lt;br /&gt;
+GOOGLE&lt;br /&gt;
+GO&lt;br /&gt;
+26 11 100&lt;br /&gt;
+ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br /&gt;
+ROSENCRANTZ&lt;/p&gt;
+
+&lt;p&gt;Output&lt;br /&gt;
+Case #1: 0.0&lt;br /&gt;
+Case #2: 0.0&lt;br /&gt;
+Case #3: 1.0&lt;br /&gt;
+Case #4: 0.8888889&lt;br /&gt;
+Case #5: 9.0&lt;/p&gt;
+
+&lt;p&gt;Note that Case #5 is not within the limits for the Small dataset.&lt;/p&gt;
+
+&lt;p&gt;In Case #1, the monkey has no chance of typing the target word “MONKEY” even once (because his keyboard lacks most of the letters in “MONKEY”), so you do not bring any bananas along when you visit, and of course you do not pay any. Poor monkey!&lt;/p&gt;
+
+&lt;p&gt;In Case #2, the monkey is guaranteed to type “AAAA”, which has two overlapping instances of the target word “AAA”. You will bring two bananas and then pay both.&lt;/p&gt;
+
+&lt;p&gt;In Case #3, the monkey will produce the following outputs with equal probability (1/4 each): “AA”, “AB”, “BA”, “BB”. These have 0, 1, 1, and 2 instances of the target word, respectively. You must bring 2 bananas to be ready for the “BB” case, but you will on average pay (0 + 1 + 1 + 2) / 4 = 1.&lt;/p&gt;
+
+&lt;p&gt;In Case #4, the monkey has a 1/3 chance of typing a “G” first and a 1/3 chance of typing an “O” second, for a 1/9 chance of typing “GO”. You will bring one banana and give it up 1/9 of the time.&lt;/p&gt;
+
+&lt;p&gt;In Case #5, the monkey could in theory type “ROSENCRANTZ” up to nine times, but the chances of this happening even once are so small that they are negligible compared to the acceptable margin of error for answers.&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-1&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;题意&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;说有一只猴子叫灰灰……（此处省略一万字）你给了灰灰一个有 K 个字母的键盘，跟它说了一个长度为 L 的单词（当然它听不懂），然后让它在键盘上随意敲 S 个键，并答应它每敲出一次这个单词就给他一根香蕉。请求出在灰灰敲出的 S 个键当中该单词&lt;strong&gt;（最多能出现的次数 - 出现次数的期望）&lt;/strong&gt;的值是多少。注意：在 BBB 中，单词BB出现的次数算做为2（重叠计算）。&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-2&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;解法&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;首先，这其实是两个问题，一个是求&lt;strong&gt;期望&lt;/strong&gt;，另一个是求&lt;strong&gt;最大值&lt;/strong&gt;；他们的差没有什么实际意义，即无法直接求出（也许有方法能够直接求，但未免有点简单问题复杂化）。&lt;/p&gt;
+
+&lt;p&gt;先说&lt;strong&gt;期望&lt;/strong&gt;。我在答案中看到了有人用 Trie 遍历了所有keyboard输出的情况，据说也不慢（S &amp;lt; 100），虽然不用想的很清楚就可以过，但确实太麻烦。其实我们只需要先求出按 L 个键能够按出 target 的概率，再乘以它在 S 个键中可能出现的位置个数就可以了，即 E = P(L) * (S - L + 1) 。这样不用把重叠的情况单拿出来讨论，具体的理论依据在官方的&lt;a href=&quot;https://code.google.com/codejam/contest/4244486/dashboard#s=a&amp;amp;a=1&quot;&gt;解析&lt;/a&gt;中有提到。至于 P(L) 的求法，只需要按字母在 target 中的顺序把它在keyboard中的出现频率乘起来就可以了。&lt;/p&gt;
+
+&lt;p&gt;再说&lt;strong&gt;最大值&lt;/strong&gt;。这里我引入了一个 &lt;em&gt;Effective Length&lt;/em&gt; 的概念。比如说对于单词 ABA，根据重叠的计数方式其实在第一个单词之后我们只需要在后面再加一个 BA ，整个单词就可以算作出现了两次（ABABA中有两个 ABA）这种情况就定义它的 effective length 为2。具体求的过程中可以直接用暴力的方法，对每个字符判断一下以它开始的子串是否等于它前面的那部分子串，复杂度为 O(L^2)，因为 L 并不大，这个算法还是很快可以得出结果。另：&lt;a href=&quot;https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-string-searching-algorithms/&quot;&gt;KMP&lt;/a&gt;可以在线性时间内算出结果。&lt;/p&gt;
+
+&lt;p&gt;AC代码如下：&lt;/p&gt;
+
+&lt;h4 id=&quot;pythonnull-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;Python&lt;/a&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;effectiveLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pt&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;xrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;# Alright, I know here map(int, raw_input().split()) would be more Pythonic&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;keyboard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;eff_len&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;effectiveLength&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;maximum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eff_len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eff_len&lt;/span&gt;
+
+	&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyboard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;expectation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maximum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expectation&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Case #{}: {}&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 15 May 2015 00:00:00 +0800</pubDate>
+        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/15/Google-Code-Jam-2015-1c2.html</link>
+        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/15/Google-Code-Jam-2015-1c2.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>解题报告：Google Code Jam 2015 Round1C Q1</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://code.google.com/codejam/contest/4244486/dashboard&quot;&gt;原题地址在这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;null-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;原题&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Problem A. Brattleship&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You’re about to play a simplified “battleship” game with your little brother. The board for this game is a rectangular grid with R rows and C columns. At the start of the game, you will close your eyes, and you will keep them closed until the end of the game. Your little brother will take a single rectangular 1 x W ship and place it horizontally somewhere on the board. The ship must always fit entirely on the board, with each cell of the ship occupying exactly one of the grid’s cells, and it can never be rotated.&lt;/p&gt;
+
+&lt;p&gt;In each turn of the game, you name a cell on the board, and your little brother tells you whether that is a hit (one of the cells occupied by the ship) or a miss. (Your little brother doesn’t say which part of the ship was hit – just that the cell you named has a part of the ship in it.) You have perfect memory, and can keep track of all the information he has given you. Once you have named all of the cells occupied by the ship, the game is over (the ship is sunk), and your score is the number of turns taken. Your goal is to minimize your score.&lt;/p&gt;
+
+&lt;p&gt;Although the ship is not supposed to be moved once it is placed, you know that your little brother, who is a brat, plans to cheat by changing the location of the ship whenever he wants, as long as the ship remains horizontal and completely on the board, and the new location is consistent with all the information he has given so far. For example, for a 1x4 board and 1x2 ship, your little brother could initially place the ship such that it overlaps the leftmost two columns. If your first guess was row 1, column 2, he could choose to secretly move the ship to the rightmost two columns, and tell you that (1, 2) was a miss. If your next guess after that was (1, 3), though, then he could not say that was also a miss and move the ship back to its original location, since that would be inconsistent with what he said about (1, 2) earlier.&lt;/p&gt;
+
+&lt;p&gt;Not only do you know that your little brother will cheat, he knows that you know. If you both play optimally (you to minimize your score, him to maximize it), what is the lowest score that you can guarantee you will achieve, regardless of what your little brother does?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The first line of the input gives the number of test cases, T. T lines follow, each with three space-separated integers R, C, and W: the number of rows and columns of the board, followed by the width of the ship.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For each test case, output one line containing “Case #x: y”, where x is the test case number (starting from 1) and y is the minimum score you can guarantee.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Limits&lt;/strong&gt;&lt;br /&gt;
+1 ≤ W ≤ C.&lt;/p&gt;
+
+&lt;p&gt;Small dataset&lt;br /&gt;
+T = 55.&lt;br /&gt;
+R = 1.
+1 ≤ C ≤ 10.&lt;/p&gt;
+
+&lt;p&gt;Large dataset&lt;br /&gt;
+1 ≤ T ≤ 100. 
+1 ≤ R ≤ 20.&lt;br /&gt;
+1 ≤ C ≤ 20.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input&lt;/p&gt;
+
+&lt;p&gt;3&lt;br /&gt;
+1 4 2&lt;br /&gt;
+1 7 7&lt;br /&gt;
+2 5 1&lt;/p&gt;
+
+&lt;p&gt;Output&lt;/p&gt;
+
+&lt;p&gt;Case #1: 3&lt;br /&gt;
+Case #2: 7&lt;br /&gt;
+Case #3: 10&lt;/p&gt;
+
+&lt;p&gt;In Case #1, the board has one row and four columns, and the ship takes up one row and two columns. One optimal strategy is for you to start by naming cell (1, 2):&lt;/p&gt;
+
+&lt;p&gt;If your little brother says it is a hit, then the other cell of the 1x2 ship must be in either (1, 1) or (1, 3), and you just have to name both. If you happen to correctly name the cell where the other part of the ship is, your little brother will just reposition the ship so that (1, 2) is still hit, but your guess is a miss. Notice that your little brother can still move the ship even after it has been hit, as long as the new position is not inconsistent with the information he has already given.&lt;/p&gt;
+
+&lt;p&gt;If your little brother says it is a miss, then the only remaining consistent scenario is that the ship is in (1, 3) and (1, 4), and your little brother will be unable to change this from now on; you just need to name those two cells.&lt;/p&gt;
+
+&lt;p&gt;So no matter what your little brother does after you say (1, 2), you can finish the game in two more moves after that, for a total of three moves.&lt;/p&gt;
+
+&lt;p&gt;Moreover, a three-move solution is optimal, because it is impossible to guarantee a finish in only two moves: without loss of generality, pick a first move. No matter what you pick, there is still a 1x2 area open and your little brother can just move the ship there and claim that you missed. It is impossible for you to sink that ship, which has not yet been hit, with only one more move.&lt;/p&gt;
+
+&lt;p&gt;In Case #2, the ship completely fills in the board and so your little brother has only one place to put it. All you have to do is name every cell.&lt;/p&gt;
+
+&lt;p&gt;In Case #3, your little brother can always move the 1x1 ship to a cell you have not tried yet, so you must name all 10 cells, only finally getting a hit (and immediately sinking the ship) on the last one.&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-1&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;题意&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;简单翻译一下就是，你和基友在玩一个新游戏叫做‘战船’。具体玩法是，你全程闭眼，他会在一个 R x C 的棋盘上某处放一只 1 x W 的船，（R，C，W 你们会事先商量好）然后每回合你可以炸掉棋盘上的任意一格；如果打中战船，基友会说‘hit’，反之则说‘miss’；直到战船所在的每一个格子都被击中，游戏结束。&lt;/p&gt;
+
+&lt;p&gt;本来游戏规则就到这为止，但是你的基友很烂，他会耍赖：每次等你开炮之后，无论船是否被击中，只要还有其他地方让船能够避开攻击，他都会将船移动过去并说‘miss’。问在两个人都非常聪明的情况下，你最少需要多少回合才能保证把整艘船击沉？&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-2&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;解法&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;这个题难度主要在于想清楚游戏过程。我们在炸格子的过程中，实际上基友会不断地移动船的位置，直到船无处可逃为止。很快能够注意到因为船始终是横置的，所以行数 R 对游戏结果的影响不大，对于最后一行以外的其他行，我们只需要每 W 格炸掉一格就可以排除掉整行（这时候基友会将船移动到下一行）。那么对于这（R-1）行，我们只需要炸（R-1）x（C/W）次，就可以将问题简化为 1 x C 的问题。&lt;/p&gt;
+
+&lt;p&gt;剩下就是怎样解决 1 x C 的问题了。假设 C 远大于 W，我们仍然可以每 W 格炸一次来排除掉大部分的位置（这个过程中基友仍然会说miss）。需要注意的是，当剩下的格子数小于或等于 2W 时，我们最少需要 W+1 次来保证炸光整条船。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+☐☐☒☐☐☐ (miss) -&amp;gt; ☐☐☒☒☐☐ (hit) -&amp;gt; ☐☐☒☒☒☐ (hit) -&amp;gt; ☐☐☒☒☒☒ (hit)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如图，C = 6，W = 3的情况，首先我们在靠近中间的位置炸一格，基友说miss（这里如果说hit，结果也是一样的。why？），我们便确定是在右边的三格，即总共需要炸四次可以结束游戏。对于其他 W 和 C 的值，只要 W &amp;lt; C &amp;lt;= 2W，总次数都是 W+1 次，不清楚的同学们可以自己去画一下。&lt;/p&gt;
+
+&lt;p&gt;讲得这里这个题思路就非常清晰了，也不需要再回头去看数据大小了，因为只有加减乘除，无论Input多大，只要没有Overflow我们都可以通过这个过程很快的得出答案。以下为代码：&lt;/p&gt;
+
+&lt;h4 id=&quot;pythonnull-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;Python&lt;/a&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Actually you don&amp;#39;t need to divide it into&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 4 cases, here I just want to make it clear. &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 13 May 2015 00:00:00 +0800</pubDate>
+        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/13/Google-Code-Jam-2015-1c1.html</link>
+        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/13/Google-Code-Jam-2015-1c1.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>阿里校招实习生面经</title>
+        <description>&lt;h4 id=&quot;null-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;一点前言&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;第一次写博客好紧张\(≧▽≦)/~~ 先自我介绍一下，北京长大，本科香港某大数学系学渣一只……一直对编程什么的很有兴趣，从大三开始有转计算机的想法，大四干脆调整航向去了计算机系辅修。大四下学期才在周围一众大神的带guai领pian下产生了暑假实习的想法，丝毫不顾自己基础薄wei弱ling的事实就去申请了……在此先谢过&lt;a href=&quot;https://github.com/grayy921013&quot;&gt;Vincent&lt;/a&gt;、Louis、&lt;a href=&quot;https://github.com/wcyz666&quot;&gt;成神&lt;/a&gt;、&lt;a href=&quot;https://github.com/elvinjin&quot;&gt;金总&lt;/a&gt;等等各位大神的全程carry。&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-1&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;申请流程&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;找内推 -&amp;gt; 内推面试（电话）-&amp;gt; 笔试（内推没过）-&amp;gt; 线下面试 -&amp;gt; 等&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-2&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;回到正题&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;先说内推。我申请的是数据研发工程师，跟大多数人一样抱了一位内部的大腿；但是一面的时候面试官直接跟我说建议先去&lt;strong&gt;读个研&lt;/strong&gt; ，有关项目和技术的问题一个都没问，面试就这么结束了……事后我结合小伙伴们的内推面试分析了一下，感觉还是因为内推的要求比较高，面试官问的都是一些很直接的问题，会更专注于你的工作能力而不是你的潜力；而我首先专业不对口，然后我也没有相关项目经验，又不是很熟悉Java/C++，所以面试官就还是把我扔回校招让他们去慢慢鉴定了……我当时又问了面试官这个情况能不能帮我转到那些偏研究性质的工作去，得到的结论是本科的学历又不太够，所以直接就跟我说还是去读个研。教训就是，&lt;strong&gt;申请职位之前一定要调查清楚，明确自己的位置！&lt;/strong&gt;内推就酱……&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-3&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;校招笔试&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;我还是申请的数据研发工程师，线上笔试涉及到保密的问题不方便细说，我只能说考得覆盖面真的很广，概率、计算机结构、数据结构、数据库、Java、C++、SQL、TCP……知识点会考的比较深。&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-4&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;线下一面&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;因为在香港读书，所以去了广州面试。时间上，因为不同职位面试安排不同，我们几个人为了能尽量一起行动，都选择了六号上午那场。到了面试地点之后刷通关卡进门，等了大概十分钟左右就轮到我了。一面的面试官是个很年轻的工程师，让我先做了一个自我介绍之后就开始问问题了。比如我在介绍的时候说自己对算法很感兴趣，平时会去参加一些线上的编程比赛，他干脆就扔给了我一个 &lt;code&gt;算法题&lt;/code&gt; ：输出两个字符串的所有公共子串。我之前做过很多关于字符串的题目，本来很有信心，但当时还是被这道题难住了。我一点思路都没有，整个人有点懵……好在他说有事要出去一下，中间过了很久才回来，在这中间我花了一点时间调整心情，后面盯着这道题想了很久，仍然没什么好办法……最后我也只能想出一个穷举结合KMP的方法，给他简单讲了一下思路之后就结束了。当时我觉得他对我的答案不是很满意，回来查了一下发现这道题其实可以用DP解决，具体算法和&lt;a href=&quot;http://en.wikipedia.org/wiki/Longest_common_subsequence_problem&quot;&gt;LCS&lt;/a&gt;那个解法很像，修改一下output应该就可以了。&lt;/p&gt;
+
+&lt;p&gt;结果这个题没有看出我的功底，于是他又让我手写一个 &lt;code&gt;快速排序&lt;/code&gt; 。手写快排这个几乎是所有工程师实习生面试都会问到的问题，我之前看了几遍code，但没有自己写过，最后还是没能写好，中间修改了很多次，最后还没写完……我用的是头尾两个指针的写法，pivot choice故意没写出来，本来打算仔细讲一下我的理解的（还有那些优化），结果他看我甚至都没能写完，也没给我时间讲😞……到这里我只想说，&lt;strong&gt;基本功真的很重要！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;之后他问了我一些关于之前实习的事情，我说具体做的是一些金融领域的数据处理，包括计算股票的covariance之类的。在这里他问得很细，到最后我居然和他讲起这些金融概念来，他看上去还挺感兴趣的，问了很多问题……我估计他是想观察我对待这些事情是否有一个好学求知的态度吧，还好我之前上过一些金融的课，讲起来也得心应手一些（偷笑）。再后来就是我大三的summer research，我当时是跟着教授学一些Surface Reconstruction的算法，还试着做了一些优化，结果还不错。但是他估计看这个research专业性质很浓，也就没细问。&lt;/p&gt;
+
+&lt;p&gt;最后他开始跟我讲数据分析具体都是做些什么，提到大数据的时候他问我知不知道Hadoop，我说有了解过，然后他直接又问了我一道 &lt;code&gt;分布式平台的问题&lt;/code&gt; ：假设有一个很大的字符串文件，存有上亿条IP地址的访问记录，有很多重复的IP，如果现在想用分布式平台将每个IP的出现次数统计出来，该怎样做？我回答说我会先分成N个子文件，然后对于每个子文件统计出当前文件中的IP的出现次数，最后merge到一台机器上去然后输出。他听了之后说分开来同国际没有问题，但是mege的时候一台机器如果存不下所有的IP地址及它们的出现次数，又该如何？我想了一会儿说，那N个输出文件先内部排个序，然后递给最后那台机器的时候从最小的开始输出，这样就不用存下所有IP了。然后面试官终于笑了……然后一面就这么结束了。&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-5&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;线下二面&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;出去等了一小会儿又在显示屏上看到了自己名字，于是又进去二面。看到面试官台子上写着’终面面试官‘，我心里一紧，心想怎么这么快就到终面了……（其实最后发现我还算面得久的）面试官是个可爱的女生😃（我知道这个称谓不太合适但我确实找不到更好的了），但凭她的姿态语气能够看出在公司里一定很有话语权，毕竟终面嘛。一上来仍然是自我介绍，与一面不同，这次面试官根本没有关注那些无关的内容，等我说完直接就开始问问题了。整个二面下来全部都是她在问我各种数据分析上的问题，包括：假如从淘宝庞大的数据库中选三个数据来描述淘宝近期的行为，你会选哪三种；假如你是知乎的数据管理员，掌握着知乎用户的所有数据（当然，不能更改），你会用哪些策略来使一个新建的账号在短期内吸引到很高的关注数……技术方面的问题只有一个，就是让我写 &lt;code&gt;SQL&lt;/code&gt; 。很简单的问题，就是从用户和设备账号中输出一些覆盖率之类的东西，最后答案只用到了COUNT、SUM。结果我想得太复杂，还加入了GROUP BY之类的东西，中间改了很多次……总之不太理想。说实话到这里我真没觉得自己能过，出门的时候我还跟小伙伴们说回去可以开始准备其他事情了……&lt;/p&gt;
+
+&lt;p&gt;其实面试的时候如果怀疑自己题意理解错了，&lt;strong&gt;一定要抬头问面试官&lt;/strong&gt;，而不要把它当做考试。其实面试官是希望你有任何问题第一时间问他们的，因为这样会增加你们交流的机会，即使你想错了，把你的思维过程告诉他们也有利于他们加深对你的了解。面试最怕的就是空有一身本领却不能有效的传达给面试官，不是么？&lt;/p&gt;
+
+&lt;h4 id=&quot;hrnull-link&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;HR面&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;二面过了我心态就比较轻松……跟HR姐姐各种狂侃，一路回答了好几个问题才意识到自己有点迷了……后面就收敛了一点，还好没扯出什么过分的事情来。具体问的问题就是很常见的一些比如’说说你自己的五个缺点和五个优点‘、’你最欣赏你的好朋友身上的哪些品质‘、’你遇到过哪些挫折‘……老实说我之前没怎么准备过，基本靠临场发挥了。这部分我也没太多建议，就是最好能够在自信和谦卑中间（我语文不好，你们意会一下……）找到一个平衡点：&lt;strong&gt;既不要太过于诚实，也不要吹牛吹破天&lt;/strong&gt;。比如说优点的时候不要太狂妄（**遭雷劈），说缺点的时候也别真的就把自己的不足100%的暴露在对方面前。话术真的是一门’术‘，要在把握好这个’度‘的同时，尽可能的把自己好的一面展现给对方，挺难的。&lt;/p&gt;
+
+&lt;p&gt;另：在回答优点缺点这类问题的时候我的同学给过我一个建议，就是当你实在不知道怎么说的时候，你可以说一些跟职位无关的事情。比如说你面试数据，然后你说你历史学得不好什么的……但我觉得这只能算做一个讨巧的方法，HR毕竟还是HR，在人家的领域你想耍小聪明，有没有用我真说不好……&lt;/p&gt;
+
+&lt;h4 id=&quot;null-link-6&quot;&gt;&lt;a href=&quot;chrome://not-a-link&quot;&gt;等&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;所以真的有个环节叫做等么……其实这里会有一个总结&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 10 May 2015 00:47:22 +0800</pubDate>
+        <link>ComeOnGetMe.github.io/jekyll/update/2015/05/10/alibaba-internship-interview.html</link>
+        <guid isPermaLink="true">ComeOnGetMe.github.io/jekyll/update/2015/05/10/alibaba-internship-interview.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>This theme is awesome. Check it out here!</title>
         <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
