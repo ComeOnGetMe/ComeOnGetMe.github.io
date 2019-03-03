@@ -1,15 +1,17 @@
 ---
-layout: post
-title:  "解题报告：Google Code Jam 2015 Round1C Q2"
-date:   2015-05-15 9：51：22
-categories: jekyll update
+layout: 	post
+title:  	"解题报告：Google Code Jam 2015 Round1C Q2"
+date:   	2015-05-15 9：51：22
+author: 	"Zhipeng"
+tags:
+    - Google code jam
 ---
 
-[原题地址在这里][question]
+> [原题地址在这里][question]
 
----
 
-####[原题][null-link]
+## 原题
+
 **Problem B. Typewriter Monkey**  
 This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.  
 
@@ -81,10 +83,12 @@ In Case #4, the monkey has a 1/3 chance of typing a "G" first and a 1/3 chance o
 
 In Case #5, the monkey could in theory type "ROSENCRANTZ" up to nine times, but the chances of this happening even once are so small that they are negligible compared to the acceptable margin of error for answers.
 
-####[题意][null-link]
+## 题意
+
 说有一只猴子叫灰灰……（此处省略一万字）你给了灰灰一个有 K 个字母的键盘，跟它说了一个长度为 L 的单词（当然它听不懂），然后让它在键盘上随意敲 S 个键，并答应它每敲出一次这个单词就给他一根香蕉。请求出在灰灰敲出的 S 个键当中该单词**（最多能出现的次数 - 出现次数的期望）**的值是多少。注意：在 BBB 中，单词BB出现的次数算做为2（重叠计算）。
 
-####[解法][null-link]
+## 解法
+
 首先，这其实是两个问题，一个是求**期望**，另一个是求**最大值**；他们的差没有什么实际意义，即无法直接求出（也许有方法能够直接求，但未免有点简单问题复杂化）。
 
 先说**期望**。我在答案中看到了有人用 Trie 遍历了所有keyboard输出的情况，据说也不慢（S < 100），虽然不用想的很清楚就可以过，但确实太麻烦。其实我们只需要先求出按 L 个键能够按出 target 的概率，再乘以它在 S 个键中可能出现的位置个数就可以了，即 E = P(L) * (S - L + 1) 。这样不用把重叠的情况单拿出来讨论，具体的理论依据在官方的[解析][analysis]中有提到。至于 P(L) 的求法，只需要按字母在 target 中的顺序把它在keyboard中的出现频率乘起来就可以了。
@@ -93,7 +97,8 @@ In Case #5, the monkey could in theory type "ROSENCRANTZ" up to nine times, but 
 
 AC代码如下：  
 
-####[Python][null-link]
+## Python
+
 {% highlight python %}
 def effectiveLength(word):
 	pt=1

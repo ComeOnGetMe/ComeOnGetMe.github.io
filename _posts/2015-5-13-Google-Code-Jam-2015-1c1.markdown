@@ -1,15 +1,17 @@
 ---
-layout: post
-title:  "解题报告：Google Code Jam 2015 Round1C Q1"
-date:   2015-05-13 17：49：22
-categories: jekyll update
+layout: 	post
+title:  	"解题报告：Google Code Jam 2015 Round1C Q1"
+date:   	2015-05-13 17：49：22
+author: 	"Zhipeng"
+tags:
+    - Google code jam
 ---
 
-[原题地址在这里][question]
+> [原题地址在这里][question]
 
----
 
-####[原题][null-link]
+## 原题
+
 **Problem A. Brattleship**
 
 You're about to play a simplified "battleship" game with your little brother. The board for this game is a rectangular grid with R rows and C columns. At the start of the game, you will close your eyes, and you will keep them closed until the end of the game. Your little brother will take a single rectangular 1 x W ship and place it horizontally somewhere on the board. The ship must always fit entirely on the board, with each cell of the ship occupying exactly one of the grid's cells, and it can never be rotated.
@@ -70,12 +72,14 @@ In Case #2, the ship completely fills in the board and so your little brother ha
 
 In Case #3, your little brother can always move the 1x1 ship to a cell you have not tried yet, so you must name all 10 cells, only finally getting a hit (and immediately sinking the ship) on the last one.
 
-####[题意][null-link]
+## 题意
+
 简单翻译一下就是，你和基友在玩一个新游戏叫做‘战船’。具体玩法是，你全程闭眼，他会在一个 R x C 的棋盘上某处放一只 1 x W 的船，（R，C，W 你们会事先商量好）然后每回合你可以炸掉棋盘上的任意一格；如果打中战船，基友会说‘hit’，反之则说‘miss’；直到战船所在的每一个格子都被击中，游戏结束。
 
 本来游戏规则就到这为止，但是你的基友很烂，他会耍赖：每次等你开炮之后，无论船是否被击中，只要还有其他地方让船能够避开攻击，他都会将船移动过去并说‘miss’。问在两个人都非常聪明的情况下，你最少需要多少回合才能保证把整艘船击沉？
 
-####[解法][null-link]
+## 解法
+
 这个题难度主要在于想清楚游戏过程。我们在炸格子的过程中，实际上基友会不断地移动船的位置，直到船无处可逃为止。很快能够注意到因为船始终是横置的，所以行数 R 对游戏结果的影响不大，对于最后一行以外的其他行，我们只需要每 W 格炸掉一格就可以排除掉整行（这时候基友会将船移动到下一行）。那么对于这（R-1）行，我们只需要炸（R-1）x（C/W）次，就可以将问题简化为 1 x C 的问题。
 
 剩下就是怎样解决 1 x C 的问题了。假设 C 远大于 W，我们仍然可以每 W 格炸一次来排除掉大部分的位置（这个过程中基友仍然会说miss）。需要注意的是，当剩下的格子数小于或等于 2W 时，我们最少需要 W+1 次来保证炸光整条船。
@@ -90,7 +94,8 @@ In Case #3, your little brother can always move the 1x1 ship to a cell you have 
 
 讲得这里这个题思路就非常清晰了，也不需要再回头去看数据大小了，因为只有加减乘除，无论Input多大，只要没有Overflow我们都可以通过这个过程很快的得出答案。以下为代码：
 
-####[Python][null-link]
+## Python
+
 {% highlight python %}
 
 # Actually you don't need to divide it into
@@ -98,7 +103,7 @@ In Case #3, your little brother can always move the 1x1 ship to a cell you have 
 def solution(r, c, w):
 	if r != 1:
 		return solution(1, c, w) + (r - 1) * (c / w)
-	elif c > 2*w:
+	elif c > 2\*w:
 		tmp = c / w - 1
 		return solution(1, c - tmp * w, w) + tmp
 	elif c > w:

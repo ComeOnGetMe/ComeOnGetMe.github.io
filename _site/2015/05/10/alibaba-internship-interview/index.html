@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。">
+    <meta name="keywords"  content="阎志鹏, 阎志鹏的博客, 博客, 个人网站, 互联网, Web, Machine Learning, Autonomous Driving">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="阿里校招实习生面经 - 阎志鹏的博客 | Zhipeng's Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="一点前言
+
+">
+    
+    <meta property="article:published_time" content="2015-05-10T00:47:22Z">
+    
+    
+    <meta property="article:author" content="Zhipeng">
+    
+    
+    <meta property="article:tag" content="Alibaba">
+    
+    <meta property="article:tag" content="面经">
+    
+    
+    <meta property="og:image" content="http://localhost:4000/img/patrick.jpg">
+    <meta property="og:url" content="http://localhost:4000/2015/05/10/alibaba-internship-interview/">
+    <meta property="og:site_name" content="阎志鹏的博客 | Zhipeng's Blog">
+    
+    <title>阿里校招实习生面经 - 阎志鹏的博客 | Zhipeng's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2015/05/10/alibaba-internship-interview/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Zhipeng's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Alibaba" title="Alibaba">Alibaba</a>
+                        
+                        <a class="tag" href="/archive/?tag=%E9%9D%A2%E7%BB%8F" title="面经">面经</a>
+                        
+                    </div>
+                    <h1>阿里校招实习生面经</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    <span class="meta">Posted by Zhipeng on May 10, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<h2 id="一点前言">一点前言</h2>
+
+<p>第一次写博客好紧张\(≧▽≦)/~~ 先自我介绍一下，北京长大，本科香港某大数学系学渣一只……一直对编程什么的很有兴趣，从大三开始有转计算机的想法，大四干脆调整航向去了计算机系辅修。大四下学期才在周围一众大神的带guai领pian下产生了暑假实习的想法，丝毫不顾自己基础薄wei弱ling的事实就去申请了……在此先谢过<a href="https://github.com/grayy921013">Vincent</a>、Louis、<a href="https://github.com/wcyz666">成神</a>、<a href="https://github.com/elvinjin">金总</a>等等各位大神的全程carry。</p>
+
+<h2 id="申请流程">申请流程</h2>
+
+<p>找内推 -&gt; 内推面试（电话）-&gt; 笔试（内推没过）-&gt; 线下面试 -&gt; 等</p>
+
+<h2 id="回到正题">回到正题</h2>
+
+<p>先说内推。我申请的是数据研发工程师，跟大多数人一样抱了一位内部的大腿；但是一面的时候面试官直接跟我说建议先去<strong>读个研</strong> ，有关项目和技术的问题一个都没问，面试就这么结束了……事后我结合小伙伴们的内推面试分析了一下，感觉还是因为内推的要求比较高，面试官问的都是一些很直接的问题，会更专注于你的工作能力而不是你的潜力；而我首先专业不对口，然后我也没有相关项目经验，又不是很熟悉Java/C++，所以面试官就还是把我扔回校招让他们去慢慢鉴定了……我当时又问了面试官这个情况能不能帮我转到那些偏研究性质的工作去，得到的结论是本科的学历又不太够，所以直接就跟我说还是去读个研。教训就是，<strong>申请职位之前一定要调查清楚，明确自己的位置！</strong>内推就酱……</p>
+
+<h2 id="校招笔试">校招笔试</h2>
+
+<p>我还是申请的数据研发工程师，线上笔试涉及到保密的问题不方便细说，我只能说考得覆盖面真的很广，概率、计算机结构、数据结构、数据库、Java、C++、SQL、TCP……知识点会考的比较深。</p>
+
+<h2 id="线下一面">线下一面</h2>
+
+<p>因为在香港读书，所以去了广州面试。时间上，因为不同职位面试安排不同，我们几个人为了能尽量一起行动，都选择了六号上午那场。到了面试地点之后刷通关卡进门，等了大概十分钟左右就轮到我了。一面的面试官是个很年轻的工程师，让我先做了一个自我介绍之后就开始问问题了。比如我在介绍的时候说自己对算法很感兴趣，平时会去参加一些线上的编程比赛，他干脆就扔给了我一个 <code class="highlighter-rouge">算法题</code> ：输出两个字符串的所有公共子串。我之前做过很多关于字符串的题目，本来很有信心，但当时还是被这道题难住了。我一点思路都没有，整个人有点懵……好在他说有事要出去一下，中间过了很久才回来，在这中间我花了一点时间调整心情，后面盯着这道题想了很久，仍然没什么好办法……最后我也只能想出一个穷举结合KMP的方法，给他简单讲了一下思路之后就结束了。当时我觉得他对我的答案不是很满意，回来查了一下发现这道题其实可以用DP解决，具体算法和<a href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem">LCS</a>那个解法很像，修改一下output应该就可以了。</p>
+
+<p>结果这个题没有看出我的功底，于是他又让我手写一个 <code class="highlighter-rouge">快速排序</code> 。手写快排这个几乎是所有工程师实习生面试都会问到的问题，我之前看了几遍code，但没有自己写过，最后还是没能写好，中间修改了很多次，最后还没写完……我用的是头尾两个指针的写法，pivot choice故意没写出来，本来打算仔细讲一下我的理解的（还有那些优化），结果他看我甚至都没能写完，也没给我时间讲😞……到这里我只想说，<strong>基本功真的很重要！</strong></p>
+
+<p>之后他问了我一些关于之前实习的事情，我说具体做的是一些金融领域的数据处理，包括计算股票的covariance之类的。在这里他问得很细，到最后我居然和他讲起这些金融概念来，他看上去还挺感兴趣的，问了很多问题……我估计他是想观察我对待这些事情是否有一个好学求知的态度吧，还好我之前上过一些金融的课，讲起来也得心应手一些（偷笑）。再后来就是我大三的summer research，我当时是跟着教授学一些Surface Reconstruction的算法，还试着做了一些优化，结果还不错。但是他估计看这个research专业性质很浓，也就没细问。</p>
+
+<p>最后他开始跟我讲数据分析具体都是做些什么，提到大数据的时候他问我知不知道Hadoop，我说有了解过，然后他直接又问了我一道 <code class="highlighter-rouge">分布式平台的问题</code> ：假设有一个很大的字符串文件，存有上亿条IP地址的访问记录，有很多重复的IP，如果现在想用分布式平台将每个IP的出现次数统计出来，该怎样做？我回答说我会先分成N个子文件，然后对于每个子文件统计出当前文件中的IP的出现次数，最后merge到一台机器上去然后输出。他听了之后说分开来同国际没有问题，但是mege的时候一台机器如果存不下所有的IP地址及它们的出现次数，又该如何？我想了一会儿说，那N个输出文件先内部排个序，然后递给最后那台机器的时候从最小的开始输出，这样就不用存下所有IP了。然后面试官终于笑了……然后一面就这么结束了。</p>
+
+<h2 id="线下二面">线下二面</h2>
+
+<p>出去等了一小会儿又在显示屏上看到了自己名字，于是又进去二面。看到面试官台子上写着’终面面试官‘，我心里一紧，心想怎么这么快就到终面了……（其实最后发现我还算面得久的）面试官是个可爱的女生😃（我知道这个称谓不太合适但我确实找不到更好的了），但凭她的姿态语气能够看出在公司里一定很有话语权，毕竟终面嘛。一上来仍然是自我介绍，与一面不同，这次面试官根本没有关注那些无关的内容，等我说完直接就开始问问题了。整个二面下来全部都是她在问我各种数据分析上的问题，包括：假如从淘宝庞大的数据库中选三个数据来描述淘宝近期的行为，你会选哪三种；假如你是知乎的数据管理员，掌握着知乎用户的所有数据（当然，不能更改），你会用哪些策略来使一个新建的账号在短期内吸引到很高的关注数……技术方面的问题只有一个，就是让我写 <code class="highlighter-rouge">SQL</code> 。很简单的问题，就是从用户和设备账号中输出一些覆盖率之类的东西，最后答案只用到了COUNT、SUM。结果我想得太复杂，还加入了GROUP BY之类的东西，中间改了很多次……总之不太理想。说实话到这里我真没觉得自己能过，出门的时候我还跟小伙伴们说回去可以开始准备其他事情了……</p>
+
+<p>其实面试的时候如果怀疑自己题意理解错了，<strong>一定要抬头问面试官</strong>，而不要把它当做考试。其实面试官是希望你有任何问题第一时间问他们的，因为这样会增加你们交流的机会，即使你想错了，把你的思维过程告诉他们也有利于他们加深对你的了解。面试最怕的就是空有一身本领却不能有效的传达给面试官，不是么？</p>
+
+<h2 id="hr面">HR面</h2>
+
+<p>二面过了我心态就比较轻松……跟HR姐姐各种狂侃，一路回答了好几个问题才意识到自己有点迷了……后面就收敛了一点，还好没扯出什么过分的事情来。具体问的问题就是很常见的一些比如’说说你自己的五个缺点和五个优点‘、’你最欣赏你的好朋友身上的哪些品质‘、’你遇到过哪些挫折‘……老实说我之前没怎么准备过，基本靠临场发挥了。这部分我也没太多建议，就是最好能够在自信和谦卑中间（我语文不好，你们意会一下……）找到一个平衡点：<strong>既不要太过于诚实，也不要吹牛吹破天</strong>。比如说优点的时候不要太狂妄（**遭雷劈），说缺点的时候也别真的就把自己的不足100%的暴露在对方面前。话术真的是一门’术‘，要在把握好这个’度‘的同时，尽可能的把自己好的一面展现给对方，挺难的。</p>
+
+<p>另：在回答优点缺点这类问题的时候我的同学给过我一个建议，就是当你实在不知道怎么说的时候，你可以说一些跟职位无关的事情。比如说你面试数据，然后你说你历史学得不好什么的……但我觉得这只能算做一个讨巧的方法，HR毕竟还是HR，在人家的领域你想耍小聪明，有没有用我真说不好……</p>
+
+<h2 id="等">等</h2>
+
+<p>所以真的有个环节叫做等么……其实这里会有一个总结</p>
+
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/01/29/hello-2015/" data-toggle="tooltip" data-placement="top" title="Hello 2015">
+                        Previous<br>
+                        <span>Hello 2015</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/05/13/Google-Code-Jam-2015-1c1/" data-toggle="tooltip" data-placement="top" title="解题报告：Google Code Jam 2015 Round1C Q1">
+                        Next<br>
+                        <span>解题报告：Google Code Jam 2015 Round1C Q1</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0002" 
+                    href="/archive/?tag=Google+code+jam"
+                    title="Google code jam"
+                    rel="3">Google code jam
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/yan-xiao-peng">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/comeongetme">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Zhipeng's Blog 2019
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

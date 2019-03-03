@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。">
+    <meta name="keywords"  content="阎志鹏, 阎志鹏的博客, 博客, 个人网站, 互联网, Web, Machine Learning, Autonomous Driving">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="解题报告：Google Code Jam 2015 Round1C Q3 - 阎志鹏的博客 | Zhipeng's Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="
+  原题地址在这里
+
+
+">
+    
+    <meta property="article:published_time" content="2015-05-16T00:00:00Z">
+    
+    
+    <meta property="article:author" content="Zhipeng">
+    
+    
+    <meta property="article:tag" content="Google code jam">
+    
+    
+    <meta property="og:image" content="http://localhost:4000/img/patrick.jpg">
+    <meta property="og:url" content="http://localhost:4000/2015/05/16/Google-Code-Jam-2015-1c3/">
+    <meta property="og:site_name" content="阎志鹏的博客 | Zhipeng's Blog">
+    
+    <title>解题报告：Google Code Jam 2015 Round1C Q3 - 阎志鹏的博客 | Zhipeng's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2015/05/16/Google-Code-Jam-2015-1c3/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Zhipeng's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Google+code+jam" title="Google code jam">Google code jam</a>
+                        
+                    </div>
+                    <h1>解题报告：Google Code Jam 2015 Round1C Q3</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    <span class="meta">Posted by Zhipeng on May 16, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<blockquote>
+  <p><a href="https://code.google.com/codejam/contest/4244486/dashboard">原题地址在这里</a></p>
+</blockquote>
+
+<h2 id="原题">原题</h2>
+
+<p><strong>Problem C. Less Money, More Problems</strong></p>
+
+<p>Up until today, the nation you live in has used D different positive integer denominations of coin for all transactions. Today, the queen got angry when a subject tried to pay his taxes with a giant sack of low-valued coins, and she just decreed that no more than C coins of any one denomination may be used in any one purchase. For instance, if C = 2 and the existing denominations are 1 and 5, it is possible to buy something of value 11 by using two 5s and one 1, or something of value 12 by using two 5s and two 1s, but it is impossible to buy something of value 9 or 17.</p>
+
+<p>You cannot directly challenge the queen’s decree, but you happen to be in charge of the mint, and you can issue new denominations of coin. You want to make it possible for any item of positive value at most V to be purchased under the queen’s new rules. (Note that this may not necessarily have been possible before the queen’s decree.) Moreover, you want to introduce as few new denominations as possible, and your final combined set of pre-existing and new denominations may not have any repeats.</p>
+
+<p>What is the smallest number of new denominations required?</p>
+
+<p><strong>Input</strong></p>
+
+<p>The first line of the input gives the number of test cases, T. T test cases follow. Each consists of one line with three space-separated values C, D, and V, followed by another line with D distinct space-separated values representing the preexisting denominations, in ascending order.</p>
+
+<p><strong>Output</strong></p>
+
+<p>For each test case, output one line containing “Case #x: y”, where x is the test case number (starting from 1) and y is the minimum number of new denominations required, as described above.</p>
+
+<p><strong>Limits</strong></p>
+
+<p>1 ≤ T ≤ 100.<br />
+Each existing denomination ≤ V.</p>
+
+<p>Small dataset</p>
+
+<p>C = 1.<br />
+1 ≤ D ≤ 5.<br />
+1 ≤ V ≤ 30.</p>
+
+<p>Large dataset</p>
+
+<p>1 ≤ C ≤ 100.<br />
+1 ≤ D ≤ 100.<br />
+1 ≤ V ≤ 109.</p>
+
+<p><strong>Sample</strong></p>
+
+<p>Input</p>
+
+<p>4<br />
+1 2 3<br />
+1 2<br />
+1 3 6<br />
+1 2 5<br />
+2 1 3<br />
+3<br />
+1 6 100<br />
+1 5 10 25 50 100</p>
+
+<p>Output</p>
+
+<p>Case #1: 0<br />
+Case #2: 1<br />
+Case #3: 1<br />
+Case #4: 3</p>
+
+<p>Note that Cases #3 and #4 are not within the limits for the Small dataset.</p>
+
+<p>In Case #1, it is already possible to make all the required values (1, 2, and 3) using at most one copy of each of the existing denominations.</p>
+
+<p>In Case #2, it suffices to add a denomination of either 3 or 4 – whichever you choose, only one new denomination is required.</p>
+
+<p>In Case #3, the optimal solution is to add a denomination of 1.</p>
+
+<h2 id="题意">题意</h2>
+
+<p>女王交给你一个任务：让你为这个国家设计一套新版硬币，对于面额的要求是：<br />
+	1. 现有的 D 种面额需要保留；<br />
+	2. 新版硬币在每种面额的硬币最多使用 C 个的情况下，能够达到的最大价值至少是 V 。</p>
+
+<p>举例：C, D, V = 1，3，6；三种面额分别为1，2，5。首先从1和2我们能够得到3，但由于每种硬币只能用一次，而第三种面额就是5，所以这种情况下我们没法凑出4，因而我们需要加入面额为4的新硬币。加入之后，我们能够凑出的价值为 5 + 4 = 9，已经超过了所要求的6，输出1，完工。</p>
+
+<h2 id="解法">解法</h2>
+
+<p>难度仍然只在于想清楚过程。运用归纳法的思想，从最小的面额开始把硬币按大小顺序一个个放到钱包里，假设用钱包中现有的硬币我可以凑出任何小于等于 N 的数，那我们只需要看下一个硬币的面额是否大于或等于 （N + 1）：如果小于，那么我们只需要将下一个硬币添加到我们的钱包当中并更新 N 即可；如果大于，我们必须额外添加面值为（N + 1）的硬币，原因如下：
+第一，用后面的硬币是不可能凑出（N + 1）的，因为它们全部大于（N + 1）；第二，用已有的硬币凑不出（N + 1）来，我们必须添加新的；第三，如果新硬币的面值小于（N + 1），那么添加后钱包所能凑出的数额将会小于添加面值为（N + 1）的硬币之后它所能凑出的数额。所以结论是，此时<strong>最优解</strong>就是添加面值为（N + 1）的硬币。</p>
+
+<p>想清楚以后，写其实不难。当时做的时候我还在想用一些比如 <code class="highlighter-rouge">deque</code> 或者 <code class="highlighter-rouge">set</code> 之类的结构去实现，但其实只需要维护一个所能表示的最大值（integer）即可。更新的时候只需要另 can_reach &lt;- can_reach + (new_coin) * C 。我一开始没想通，最后差一点时间写完……有点遗憾。复杂度在这里其实无关紧要了，简单分析一下结构，粗略来看，每个 loop 当中 reach 都会变大 C 倍，所以最次就是 O(logV) 的时间复杂度。代码如下：</p>
+
+<h2 id="python">Python</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">tc</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">input</span><span class="p">()):</span>
+	<span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">raw_input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+	<span class="n">coins</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">raw_input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+	<span class="n">reach</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">while</span> <span class="n">reach</span> <span class="o">&lt;</span> <span class="n">v</span><span class="p">:</span>
+		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+			<span class="n">coin</span> <span class="o">=</span> <span class="n">coins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">break</span>
+		<span class="k">if</span> <span class="n">coin</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">reach</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+			<span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+			<span class="n">reach</span> <span class="o">+=</span> <span class="p">(</span><span class="n">reach</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">reach</span> <span class="o">+=</span> <span class="n">coin</span> <span class="o">*</span> <span class="n">c</span>
+			<span class="n">coins</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+	<span class="c1"># This WHILE loop can be combined with the previous one
+</span>	<span class="k">while</span> <span class="n">reach</span> <span class="o">&lt;</span> <span class="n">v</span><span class="p">:</span>
+		<span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+		<span class="n">reach</span> <span class="o">+=</span> <span class="p">(</span><span class="n">reach</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span>
+	<span class="k">print</span> <span class="s">'Case #{}: {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">tc</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></code></pre></figure>
+
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/05/15/Google-Code-Jam-2015-1c2/" data-toggle="tooltip" data-placement="top" title="解题报告：Google Code Jam 2015 Round1C Q2">
+                        Previous<br>
+                        <span>解题报告：Google Code Jam 2015 Round1C Q2</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0002" 
+                    href="/archive/?tag=Google+code+jam"
+                    title="Google code jam"
+                    rel="3">Google code jam
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/yan-xiao-peng">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/comeongetme">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Zhipeng's Blog 2019
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

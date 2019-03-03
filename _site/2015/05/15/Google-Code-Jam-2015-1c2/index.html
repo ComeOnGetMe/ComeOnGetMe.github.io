@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。">
+    <meta name="keywords"  content="阎志鹏, 阎志鹏的博客, 博客, 个人网站, 互联网, Web, Machine Learning, Autonomous Driving">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="解题报告：Google Code Jam 2015 Round1C Q2 - 阎志鹏的博客 | Zhipeng's Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="
+  原题地址在这里
+
+
+">
+    
+    <meta property="article:published_time" content="2015-05-15T00:00:00Z">
+    
+    
+    <meta property="article:author" content="Zhipeng">
+    
+    
+    <meta property="article:tag" content="Google code jam">
+    
+    
+    <meta property="og:image" content="http://localhost:4000/img/patrick.jpg">
+    <meta property="og:url" content="http://localhost:4000/2015/05/15/Google-Code-Jam-2015-1c2/">
+    <meta property="og:site_name" content="阎志鹏的博客 | Zhipeng's Blog">
+    
+    <title>解题报告：Google Code Jam 2015 Round1C Q2 - 阎志鹏的博客 | Zhipeng's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2015/05/15/Google-Code-Jam-2015-1c2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Zhipeng's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Google+code+jam" title="Google code jam">Google code jam</a>
+                        
+                    </div>
+                    <h1>解题报告：Google Code Jam 2015 Round1C Q2</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    <span class="meta">Posted by Zhipeng on May 15, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<blockquote>
+  <p><a href="https://code.google.com/codejam/contest/4244486/dashboard">原题地址在这里</a></p>
+</blockquote>
+
+<h2 id="原题">原题</h2>
+
+<p><strong>Problem B. Typewriter Monkey</strong><br />
+This contest is open for practice. You can try every problem as many times as you like, though we won’t keep track of which problems you solve. Read the Quick-Start Guide to get started.</p>
+
+<p>Your publishing house has decided to use monkeys randomly typing at keyboards to write great works of literature. You are the supervisor for one monkey with a keyboard containing K keys, each of which is labeled with an uppercase English letter. (There may be multiple keys displaying the same letter.) The monkey will start with an empty string and repeat the following S times: choose a key from its keyboard uniformly at random and press it, adding a copy of that key’s letter to the right end of the string. The final resulting string will have length S.</p>
+
+<p>You have a target word of length L that you are hoping the monkey will type. (The target word will not necessarily be a real English word.) This target word may even appear multiple times in what the monkey types. (Overlapping instances count too – for example, if “ABA” is the target word and the monkey types “ABABA”, that contains two instances of the target.)</p>
+
+<p>You plan to pay the monkey one banana for each instance of the target word that it types. When you go to inspect the monkey’s work, you will bring along the minimum number of bananas that you need to ensure that you will always have enough bananas to pay the monkey, no matter what it has typed. Then, you will pay the monkey one banana for each instance of the target word that it actually typed. You will keep the remaining bananas that you brought with you.</p>
+
+<p>What is the expected number of bananas that you will get to keep?</p>
+
+<p><strong>Input</strong></p>
+
+<p>The first line of the input gives the number of test cases, T. T test cases follow. Each consists of three lines. The first contains three space-separated positive integers: K, L, and S. The second contains a string of K uppercase English letters representing the monkey’s keyboard. The third contains a string of L uppercase English letters representing the target word.</p>
+
+<p><strong>Output</strong></p>
+
+<p>For each test case, output one line containing “Case #x: y”, where y is the expected number of bananas you will get to keep after paying the monkey.</p>
+
+<p>y will be considered correct if it is within an absolute or relative error of 10-6 of the correct answer. See the FAQ for an explanation of what that means, and what formats of real numbers we accept.</p>
+
+<p><strong>Limits</strong><br />
+1 ≤ T ≤ 100.</p>
+
+<p>Small dataset<br />
+1 ≤ K ≤ 7.<br />
+1 ≤ L ≤ S ≤ 7.</p>
+
+<p>Large dataset<br />
+1 ≤ K ≤ 100.<br />
+1 ≤ L ≤ S ≤ 100.</p>
+
+<p><strong>Sample</strong></p>
+
+<p>Input<br />
+5<br />
+7 6 6<br />
+BANANAS<br />
+MONKEY<br />
+2 3 4<br />
+AA<br />
+AAA<br />
+2 1 2<br />
+AB<br />
+B<br />
+6 2 2<br />
+GOOGLE<br />
+GO<br />
+26 11 100<br />
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+ROSENCRANTZ</p>
+
+<p>Output<br />
+Case #1: 0.0<br />
+Case #2: 0.0<br />
+Case #3: 1.0<br />
+Case #4: 0.8888889<br />
+Case #5: 9.0</p>
+
+<p>Note that Case #5 is not within the limits for the Small dataset.</p>
+
+<p>In Case #1, the monkey has no chance of typing the target word “MONKEY” even once (because his keyboard lacks most of the letters in “MONKEY”), so you do not bring any bananas along when you visit, and of course you do not pay any. Poor monkey!</p>
+
+<p>In Case #2, the monkey is guaranteed to type “AAAA”, which has two overlapping instances of the target word “AAA”. You will bring two bananas and then pay both.</p>
+
+<p>In Case #3, the monkey will produce the following outputs with equal probability (1/4 each): “AA”, “AB”, “BA”, “BB”. These have 0, 1, 1, and 2 instances of the target word, respectively. You must bring 2 bananas to be ready for the “BB” case, but you will on average pay (0 + 1 + 1 + 2) / 4 = 1.</p>
+
+<p>In Case #4, the monkey has a 1/3 chance of typing a “G” first and a 1/3 chance of typing an “O” second, for a 1/9 chance of typing “GO”. You will bring one banana and give it up 1/9 of the time.</p>
+
+<p>In Case #5, the monkey could in theory type “ROSENCRANTZ” up to nine times, but the chances of this happening even once are so small that they are negligible compared to the acceptable margin of error for answers.</p>
+
+<h2 id="题意">题意</h2>
+
+<p>说有一只猴子叫灰灰……（此处省略一万字）你给了灰灰一个有 K 个字母的键盘，跟它说了一个长度为 L 的单词（当然它听不懂），然后让它在键盘上随意敲 S 个键，并答应它每敲出一次这个单词就给他一根香蕉。请求出在灰灰敲出的 S 个键当中该单词<strong>（最多能出现的次数 - 出现次数的期望）</strong>的值是多少。注意：在 BBB 中，单词BB出现的次数算做为2（重叠计算）。</p>
+
+<h2 id="解法">解法</h2>
+
+<p>首先，这其实是两个问题，一个是求<strong>期望</strong>，另一个是求<strong>最大值</strong>；他们的差没有什么实际意义，即无法直接求出（也许有方法能够直接求，但未免有点简单问题复杂化）。</p>
+
+<p>先说<strong>期望</strong>。我在答案中看到了有人用 Trie 遍历了所有keyboard输出的情况，据说也不慢（S &lt; 100），虽然不用想的很清楚就可以过，但确实太麻烦。其实我们只需要先求出按 L 个键能够按出 target 的概率，再乘以它在 S 个键中可能出现的位置个数就可以了，即 E = P(L) * (S - L + 1) 。这样不用把重叠的情况单拿出来讨论，具体的理论依据在官方的<a href="https://code.google.com/codejam/contest/4244486/dashboard#s=a&amp;a=1">解析</a>中有提到。至于 P(L) 的求法，只需要按字母在 target 中的顺序把它在keyboard中的出现频率乘起来就可以了。</p>
+
+<p>再说<strong>最大值</strong>。这里我引入了一个 <em>Effective Length</em> 的概念。比如说对于单词 ABA，根据重叠的计数方式其实在第一个单词之后我们只需要在后面再加一个 BA ，整个单词就可以算作出现了两次（ABABA中有两个 ABA）这种情况就定义它的 effective length 为2。具体求的过程中可以直接用暴力的方法，对每个字符判断一下以它开始的子串是否等于它前面的那部分子串，复杂度为 O(L^2)，因为 L 并不大，这个算法还是很快可以得出结果。另：<a href="https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-string-searching-algorithms/">KMP</a>可以在线性时间内算出结果。</p>
+
+<p>AC代码如下：</p>
+
+<h2 id="python">Python</h2>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">effectiveLength</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+	<span class="n">pt</span><span class="o">=</span><span class="mi">1</span>
+	<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+	<span class="k">while</span> <span class="p">(</span><span class="n">pt</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">word</span><span class="p">[</span><span class="n">pt</span><span class="o">+</span><span class="n">i</span><span class="p">]:</span>
+			<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+			<span class="n">pt</span> <span class="o">+=</span> <span class="mi">1</span>
+	<span class="k">return</span> <span class="n">pt</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">input</span><span class="p">()):</span>
+	<span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">raw_input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+	<span class="c1"># Alright, I know here map(int, raw_input().split()) would be more Pythonic
+</span>	<span class="n">keyboard</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+	<span class="n">target</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">()</span>
+	<span class="n">eff_len</span> <span class="o">=</span> <span class="n">effectiveLength</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+	<span class="n">maximum</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="p">(</span><span class="n">l</span> <span class="o">-</span> <span class="n">eff_len</span><span class="p">))</span> <span class="o">/</span> <span class="n">eff_len</span>
+
+	<span class="n">prob</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span>
+	<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">target</span><span class="p">:</span>
+		<span class="n">prob</span> <span class="o">*=</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+	<span class="n">expectation</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">prob</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">result</span> <span class="o">=</span> <span class="n">maximum</span> <span class="o">-</span> <span class="n">expectation</span>
+	<span class="k">print</span> <span class="s">'Case #{}: {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></code></pre></figure>
+
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/05/13/Google-Code-Jam-2015-1c1/" data-toggle="tooltip" data-placement="top" title="解题报告：Google Code Jam 2015 Round1C Q1">
+                        Previous<br>
+                        <span>解题报告：Google Code Jam 2015 Round1C Q1</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/05/16/Google-Code-Jam-2015-1c3/" data-toggle="tooltip" data-placement="top" title="解题报告：Google Code Jam 2015 Round1C Q3">
+                        Next<br>
+                        <span>解题报告：Google Code Jam 2015 Round1C Q3</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0002" 
+                    href="/archive/?tag=Google+code+jam"
+                    title="Google code jam"
+                    rel="3">Google code jam
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.zhihu.com/people/yan-xiao-peng">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa  fa-stack-1x fa-inverse">知</i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/comeongetme">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Zhipeng's Blog 2019
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

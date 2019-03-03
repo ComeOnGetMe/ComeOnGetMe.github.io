@@ -123,6 +123,9 @@ ENV/
 
 # cmake
 cmake-build-debug/
-
 cxx_lib/.idea
 cxx_lib/cmake-build-debug/
+
+# MAC
+.DS_Store
+.sass-cache/*
